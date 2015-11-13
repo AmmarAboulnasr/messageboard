@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+  head
+    title Message Board
+    link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel='stylesheet')
+    link(href="bower_components/font-awesome/css/font-awesome.min.css", rel='stylesheet')
+    link(href="bower_components/sweetalert/dist/sweetalert.css", rel='stylesheet')
+    link(href="style.css", rel='stylesheet')
+  body
+    h1 Message Board
+    div.col-xs-6.form-group
+      label(for='message') Message:&nbsp
+      input.form-control#message(type='text')
+      label(for='author') &nbspAuthor:&nbsp
+      input.form-control#author(type='text')
+      p
+      button.btn.btn-default.col-xs-12#add Add
+    
+    table.table
+      thead
+        tr
+          th.col-xs-8 Message
+          th.col-xs-2 Author
+          th.col-xs-1 Date / Time
+          th.col-xs-1
+      tbody
+
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src='bower_components/sweetalert/dist/sweetalert.min.js')
+    script(src="bower_components/moment/min/moment.min.js")
+    script(src='messages.js')
